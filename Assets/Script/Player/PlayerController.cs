@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
                         moveDirection.y = jumpSpeed;
                     }
 
-                    rb.velocity = moveDirection;
+                    rb.linearVelocity = moveDirection;
                 }
                 
                 if(isCool){
@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    //ƒN[ƒ‹ƒ^ƒCƒ€ˆ—
+    //ï¿½Nï¿½[ï¿½ï¿½ï¿½^ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     private async void Cooling(){
         isCool = false;
         await Task.Delay((int)(DashCool * 1000));
